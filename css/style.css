@@ -1,0 +1,27 @@
+table#truthTable {
+	border: 0;
+}
+
+table#truthTable thead tr {
+	background-color: #ccc;
+}
+
+table#truthTable tbody tr:nth-child(2n) {
+	background-color: #f0f0f0;
+}
+
+table#truthTable td,
+table#truthTable th {
+	text-align: center;
+	padding: 3px 10px;
+	margin: 0px;
+}
+
+table#truthTable td.result,
+table#truthTable th.result {
+	font-weight: bold;
+}
+
+table#truthTable td.false {
+	color: #999;
+}

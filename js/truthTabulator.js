@@ -114,28 +114,34 @@
             truthTableElement.append(tableBody);
         }
 
+		// todo - change to getHeaders
         function addHeaders (identifiers, expression, tableHeader) {
+			var row = $('<tr />');
+			
             identifiers.forEach(function (identifier) {
-                tableHeader.append($('<th />').text(identifier));
+                row.append($('<th />').text(identifier));
             });
 
-            tableHeader.append($('<th />').text(expression));
+			row.append($('<th />').addClass('result').text(expression));
+			
+			tableHeader.append(row);
         }
 
+		// todo - change to getRow
         function addRow(rowData, tableBody) {
-            var tableRow,
-                resultCell;
-
-            tableRow = $('<tr />');
+            var tableRow = $('<tr />');
 
             rowData.inputs.forEach(function (input) {
-                var tableCell = $('<td />').text(input.value);
-                tableRow.append(tableCell);
+                tableRow.append($('<td />')
+					.addClass(input.value ? 'true' : 'false')
+					.text(input.value));
             });
 
-            resultCell = $('<td />').text(rowData.result);
-
-            tableRow.append(resultCell);
+            tableRow.append($('<td />')
+				.addClass('result')
+				.addClass(rowData.result ? 'true' : 'false')
+				.text(rowData.result));
+				
             tableBody.append(tableRow);
         }
     });
