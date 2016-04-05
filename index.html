@@ -8,13 +8,36 @@
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1>Truth Tabulator</h1>
-    <label for="expressionBox">Expression</label><br />
-    <textarea id="expressionBox"></textarea><br />
-    <button id="startButton">Generate Truth Table</button>
+    <div id="mainContainer">
+        <header>
+            <h1>Truth Tabulator</h1>
+            <p>
+                Creates truth tables from simple javascript-like boolean expressions.<br />
+                <a href="https://github.com/gilessmart/truth-tabulator">See the code</a> on GitHub.
+            </p>
+        </header>
+        
+        <section id="input">
+            <h2>Input</h2>
+            
+            <form>
+                <div class="formLabelBox">
+                    <label for="expressionBox">Boolean Expression</label><br />
+                    e.g. <code>a || b && !c</code>
+                </div>
+                <div class="formInputBox">
+                    <textarea id="expressionBox"></textarea><br />
+                </div>
+                <div class="clearMe"></div>
+                
+                <button id="startButton">Generate Truth Table</button>
+            </form>
+        </section>
 
-    <h2>Your truth table</h2>
-    <table id="truthTable">
-    </table>
+        <section id="results">
+            <h2>Result</h2>
+            <table id="truthTable"></table>
+        </section>
+    </div>
 </body>
 </html>

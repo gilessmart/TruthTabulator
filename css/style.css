@@ -1,27 +1,85 @@
-table#truthTable {
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-weight: normal;
+}
+
+.clearMe {
+    clear: both;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin-bottom: 0.75em;
+    margin-top: 0.75em;
+}
+
+li {
+    margin-left: 2em;
+}
+
+textarea, button {
+    border: solid 1px #666;
+}
+
+button {
+    padding: 0.25em;
+}
+
+#mainContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#input form .formLabelBox {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 0.75em;
+}
+
+#input form .formInputBox {
+    float: left;
+    margin-bottom: 0.75em;
+}
+
+#input form #expressionBox {
+    max-width: 250px;
+    max-height: 75px;
+}
+
+#results {
+    display: none;
+}
+
+#results table#truthTable {
 	border: 0;
 }
 
-table#truthTable thead tr {
+#results table#truthTable thead tr {
 	background-color: #ccc;
 }
 
-table#truthTable tbody tr:nth-child(2n) {
+#results table#truthTable tbody tr:nth-child(2n) {
 	background-color: #f0f0f0;
 }
 
-table#truthTable td,
-table#truthTable th {
+#results table#truthTable td,
+#results table#truthTable th {
 	text-align: center;
 	padding: 3px 10px;
 	margin: 0px;
 }
 
-table#truthTable td.result,
-table#truthTable th.result {
+#results table#truthTable td.result,
+#results table#truthTable th.result {
 	font-weight: bold;
 }
 
-table#truthTable td.false {
+#results table#truthTable td.false {
 	color: #999;
 }

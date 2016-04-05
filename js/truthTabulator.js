@@ -90,13 +90,14 @@
         var expressionBox = $('#expressionBox'),
             startButton = $('#startButton'),
             identifiersList = $('#identifiersList'),
-            truthTableElement = $('#truthTable');
+            truthTableElement = $('#truthTable'),
+            resultsSection = $('#results');
 
         startButton.click(function () {
             var expression = expressionBox.val(),
                 truthTable = getTruthTable(expression);
-
             setResult(truthTable);
+            return false;
         });
 
         function setResult (truthTable) {
@@ -112,6 +113,8 @@
 
             truthTableElement.append(tableHeader);
             truthTableElement.append(tableBody);
+            
+            resultsSection.show();
         }
 
 		// todo - change to getHeaders
